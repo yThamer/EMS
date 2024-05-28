@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 
 public class EmployeeManager {
-    private ArrayList<Employee> employees = new ArrayList<>();
+    private ArrayList <Employee> employees = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
     private boolean isIdUnique(int id) {
@@ -19,7 +19,7 @@ public class EmployeeManager {
         System.out.print("Enter ID: ");
         int id = scanner.nextInt();
         if (!isIdUnique(id)) {
-            System.out.println("Error: Employee ID already exists.");
+            System.out.println("Error: Employee ID already exists. \n");
             return;
         }
         scanner.nextLine();
@@ -32,14 +32,14 @@ public class EmployeeManager {
 
         Employee employee = new Employee(id, name, position, salary);
         employees.add(employee);
-        System.out.println("Employee added successfully.");
+        System.out.println("Employee added successfully. \n");
     }
 
     public void addManager() {
         System.out.print("Enter ID: ");
         int id = scanner.nextInt();
         if (!isIdUnique(id)) {
-            System.out.println("Error: Manager ID already exists.");
+            System.out.println("Error: Employee ID already exists. \n");
             return;
         }
         scanner.nextLine();
@@ -55,7 +55,7 @@ public class EmployeeManager {
 
         Manager manager = new Manager(id, name, position, salary, department);
         employees.add(manager);
-        System.out.println("Manager added successfully.");
+        System.out.println("Manager added successfully. \n");
     }
 
     public void removeEmployee() {
@@ -63,7 +63,7 @@ public class EmployeeManager {
         int id = scanner.nextInt();
 
         employees.removeIf(employee -> employee.getId() == id);
-        System.out.println("Employee removed successfully.");
+        System.out.println("Employee removed successfully. \n");
     }
 
     public void updateEmployee() {
@@ -82,16 +82,16 @@ public class EmployeeManager {
                 employee.setName(name);
                 employee.setPosition(position);
                 employee.setSalary(salary);
-                System.out.println("Employee updated successfully.");
+                System.out.println("Employee updated successfully. \n");
                 return;
             }
         }
-        System.out.println("Employee not found.");
+        System.out.println("Employee not found. \n");
     }
 
     public void listEmployees() {
         if (employees.isEmpty()){
-            System.out.println("Employees is Empty\n");
+            System.out.println("Employees is Empty \n");
         }
         for (Employee employee : employees) {
             System.out.println(employee);
