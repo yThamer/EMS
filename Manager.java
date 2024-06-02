@@ -18,8 +18,6 @@ public class Manager extends Employee{
         Scanner eScanner = new Scanner(System.in);
         
         while (true) {
-            System.out.println("Made by Thamer (: \n--------------------");
-
             System.out.println("1. Add Employee");
             System.out.println("2. Add Manager");
             System.out.println("3. Remove Employee");
