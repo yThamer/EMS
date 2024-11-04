@@ -18,4 +18,5 @@ public class Admin extends Employee {
     public String toString() {
         return super.toString() + ", Department = " + department + "]";
     }
+// Admin
 }
